@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clickable link test</title>
+
+</head>
+
+<body>
+    <h1>Link list</h1>
+    
+    <button onclick="firstFunction()" style="font-size: large;">[Jenkins]</button>
+        <p id="jenkins"></p>
+
+    <button onclick="secondFunction()" style="font-size: large;">[HomeBridge]</button>
+        <p id="homebridge"></p>
+    
+    <script>
+        function firstFunction() {
+            var str = "Jenkins (sign in page)";
+            var result = str.link("http://192.168.13.200:8080/login?from=%2F");
+            document.getElementById("jenkins").innerHTML = result;
+        }
+    </script>
+
+    <script>
+        function secondFunction() {
+            var str = "HomeBridge main page"
+            var result = str.link("https://192.168.13.200:8581");
+            document.getElementById("homebridge").innerHTML = result;
+        }
+    </script>
+    
+
+    
+</body>
+</html>

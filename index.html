@@ -13,8 +13,6 @@
 <body>
     <h1>Link list</h1>
 
-    <h2>update test</h2>
-
     <link rel="stylesheet" href="index.css">
     
     <button onclick="firstFunction()" style="font-size: large;">[Jenkins]</button>
@@ -22,6 +20,9 @@
 
     <button onclick="secondFunction()" style="font-size: large;">[HomeBridge]</button>
         <p id="homebridge"></p>
+
+    <button onclick="thirdFunction()" style="font-size: large;">[Rickroll]</button>
+        <p id="rickroll"></p>
     
     <script>
         function firstFunction() {
@@ -39,6 +40,13 @@
         }
     </script>
     
+    <script>
+        function thirdFunction() {
+            var str = "Third button out of use";
+            var result = str.link("https://www.youtube.com/watch?v=dQw4w9WgXcQ")
+            document.getElementById("rickroll").innerHTML = result;
+        }
+    </script>
 
     
 </body>
